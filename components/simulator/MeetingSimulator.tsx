@@ -129,6 +129,9 @@ export default function MeetingSimulator() {
         <p className="text-xs font-bold text-slate-400 italic">
           &ldquo;한 아이를 지키기 위해 온 전문가의 목소리가 하나로 모입니다.&rdquo;
         </p>
+        <p className="text-[11px] text-slate-400">
+          &copy; {new Date().getFullYear()} 신연옥. All rights reserved.
+        </p>
       </div>
     </div>
   );

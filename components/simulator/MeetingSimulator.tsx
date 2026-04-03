@@ -52,7 +52,8 @@ export default function MeetingSimulator() {
     playPreloadedRef.current(cached, () => {
       const next = lineIndex + 1;
       if (next < ALL_LINES.length) {
-        playLine(next);
+        const stepChanged = ALL_LINES[next].step !== lineInfo.step;
+        setTimeout(() => playLine(next), stepChanged ? 3000 : 0);
       }
     });
   }, []); // ref 기반이므로 의존성 없음

@@ -8,8 +8,6 @@ import { generateSingleTTS } from '@/lib/gemini';
 import { VOICE_MAP } from '@/lib/constants';
 import type { DialogueLine } from '@/types/meeting';
 
-// Edge runtime — Cloudflare Workers / Vercel Edge 호환
-export const runtime = 'edge';
 
 export async function POST(req: NextRequest) {
   const apiKey = process.env.GEMINI_API_KEY;

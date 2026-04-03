@@ -55,12 +55,17 @@ export default function DialoguePanel({ logs, currentStep, isSpeaking, isStarted
             return (
               <div key={i}>
                 {showStepHeader && (
-                  <div className="flex items-center gap-3 mb-4 mt-2">
-                    <div className="h-[1px] flex-1 bg-slate-700" />
-                    <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest whitespace-nowrap px-2">
-                      {stepLabel}
-                    </span>
-                    <div className="h-[1px] flex-1 bg-slate-700" />
+                  <div className="my-6">
+                    <div className="flex items-center gap-3">
+                      <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-blue-500/60" />
+                      <div className="flex items-center gap-2 bg-blue-600/20 border border-blue-500/40 rounded-xl px-4 py-2 shadow-lg shadow-blue-900/30">
+                        <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse shrink-0" />
+                        <span className="text-[13px] font-black text-blue-300 tracking-widest whitespace-nowrap">
+                          {stepLabel}
+                        </span>
+                      </div>
+                      <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-blue-500/60" />
+                    </div>
                   </div>
                 )}
                 <DialogueMessage
